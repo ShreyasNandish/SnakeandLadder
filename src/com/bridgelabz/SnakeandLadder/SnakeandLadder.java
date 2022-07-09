@@ -15,6 +15,9 @@ public class SnakeandLadder {
         int option = (int) ((Math.random() * 10 % 3) + 1);
         if (option == IS_SNAKE) {
             currentPosition -= diceNumber;
+            if(currentPosition<0){
+                currentPosition=START_POSITION;
+            }
             System.out.println("Player got with snake position : " + currentPosition);
         } else if (option == IS_LADDER) {
             currentPosition += diceNumber;
